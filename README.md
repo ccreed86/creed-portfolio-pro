@@ -1,8 +1,6 @@
-# cliff-portfolio
-Clifton's Programming Portfolio
+# Clifton's Programming Portfolio
 
-##
-A growing porfessional full-stack coding portfolio featureing Clifton Reeds Projects and acheivments. The Portfolio include Contact information, a brief About Me, and several projects that have been completed and deployed via Github.
+A growing professional full-stack coding portfolio featuring Clifton Reeds Projects and achievements. The Portfolio include Contact information, a brief About Me, and several projects that have been completed and deployed and their repositories.
 
 ## Installation
 
@@ -10,7 +8,7 @@ N/A
 
 ## Usage
 
-You can visit this site to find out more about Clifton Reed and the projects he has contributed to. You can find contact information to reach out to Cliff. You can also visit Cliff's Github profile via the Github link at the bottom of the page. You can use this content for referance or any other means to your own ends.
+You can visit this site to find out more about Clifton Reed and the projects he has contributed to. You can find contact information to reach out to Cliff as well as a downloadable Resume via microsoft word. You can also visit Cliff's Github profile, LinkIn or *** via the corresponding link at the bottom of the page. You can use this content for reference or any other means to your own ends as per the license.
 
 ## Credits
 
