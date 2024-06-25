@@ -1,0 +1,53 @@
+:root {
+
+    /* Dark Color Pallet */
+    --blue: rgb(7,78,103);
+    --seablue: rgb(5,135,138);
+    --coral: rgb(182,175,157);
+    --sand: rgb(255,143,122);
+    --pink: rgb(215,204,200);
+
+    /* Coastal Pallet */
+    --sky: rgb(201,241,242);
+    --ocean: rgb(100,181,193);
+    --sunset: rgb(242,159,90);
+    --sandy: rgb(226,215,176);
+    --rocks: rgb(132,121,104);
+
+}
+
+header {
+    background-color: var(--ocean);
+    color: var(--sky);
+    font-size: 50px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.nav a {
+    padding: 15px;
+    font-size: 30px;
+    color: inherit;
+    background-color: inherit;
+    text-decoration: inherit;
+}
+
+nav a:hover {
+    color: var(--sunset)
+}
+
+h1 {
+    font-size: 75px;
+    background-image: url("../assets/cssImages/vbi_skyline.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    object-fit: fill;
+    min-height: 250px;
+    min-width: fit-content;
+
+}
