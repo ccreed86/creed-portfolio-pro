@@ -19,6 +19,7 @@
 header {
     background-color: var(--ocean);
     color: var(--sky);
+    font-size: 50px;
     padding: 15px;
     display: flex;
     flex-direction: row;
@@ -30,6 +31,7 @@ header {
 
 .nav a {
     padding: 15px;
+    font-size: 30px;
     color: inherit;
     background-color: inherit;
     text-decoration: inherit;
@@ -37,5 +39,15 @@ header {
 
 nav a:hover {
     color: var(--sunset)
+}
+
+h1 {
+    font-size: 75px;
+    background-image: url("../assets/cssImages/vbi_skyline.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    object-fit: fill;
+    min-height: 250px;
+    min-width: fit-content;
 
 }
