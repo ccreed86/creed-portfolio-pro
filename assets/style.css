@@ -65,6 +65,78 @@ h1 {
     2px -2px 0 #000;
     padding: 15px;
 
+}
 
-    
+h2 {
+    font-size: 30px;
+}
+
+.about {
+    background-color: var(--rocks);
+    color: var(--sandy);
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cliff {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: solid 5px var(--sandy);
+    height: 150px;
+    width: 125px;
+}
+
+#about {
+    border-top: double 5px var(--sandy);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+p {
+    text-indent: 4ch;
+    margin-bottom: 10px;
+}
+
+.projects {
+    background-color: var(--ocean);
+    color: var(--sky);
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.contact {
+    background-color: var(--rocks);
+    color: var(--sandy);
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+
+#contact {
+    background-color: var(--rocks);
+    color: var(--sandy);
+    font-size: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
