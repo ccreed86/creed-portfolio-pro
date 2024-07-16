@@ -1,142 +1,425 @@
 :root {
+  /* Coastal Pallet */
+  --sky: rgb(201, 241, 242);
+  --ocean: rgb(100, 181, 193);
+  --sunset: rgb(242, 159, 90);
+  --sandy: rgb(226, 215, 176);
+  --rocks: rgb(132, 121, 104);
 
-    /* Coastal Pallet */
-    --sky: rgb(201,241,242);
-    --ocean: rgb(100,181,193);
-    --sunset: rgb(242,159,90);
-    --sandy: rgb(226,215,176);
-    --rocks: rgb(132,121,104);
-
-    /* Dark Color Pallet */
-    --blue: rgb(7,78,103);
-    --seablue: rgb(5,135,138);
-    --coral: rgb(182,175,157);
-    --sand: rgb(255,143,122);
-    --pink: rgb(215,204,200);
-
+  /* Dark Color Pallet */
+  --blue: rgb(7, 78, 103);
+  --seablue: rgb(5, 135, 138);
+  --coral: rgb(182, 175, 157);
+  --sand: rgb(255, 143, 122);
+  --pink: rgb(215, 204, 200);
 }
 
 header {
-    background-color: var(--ocean);
-    color: var(--sky);
-    font-size: 50px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-
+  background-color: var(--ocean);
+  color: var(--sky);
+  font-size: 50px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .nav a {
-    padding: 15px;
-    font-size: 30px;
-    color: inherit;
-    background-color: inherit;
-    text-decoration: inherit;
+  padding: 15px;
+  font-size: 30px;
+  color: inherit;
+  background-color: inherit;
+  text-decoration: inherit;
 }
 
 nav a:hover {
-    color: var(--sunset)
+  color: var(--sunset);
 }
 
-.hero {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../assets/cssImages/vbi_skyline.jpg");
-    background-repeat: no-repeat;
-    object-fit: fill;
-    min-height: 250px;
-    min-width: fit-content;
+/* light and dark mode toggle switch START*/
 
+.switch-3 {
+  --dark-sky: #313032;
+  --moon: #aeaaae;
+  --light-sky: #8f44fd;
+  --sun: #f7f7f7;
+  display: inline-block;
+  position: relative;
+  border-radius: 5em;
+  cursor: pointer;
+  width: 60px;
+  height: 32px;
+  overflow: hidden;
+  scale: 0.7;
+  transition: all 0.5s;
+}
+
+.switch-3 .back {
+  background-color: var(--dark-sky);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.switch-3 .checkbox {
+  opacity: 0;
+}
+
+.switch-3 .checkbox:checked ~ .back {
+  background-color: var(--light-sky);
+}
+
+.switch-3 .checkbox:checked ~ .moon {
+  transform: translateX(24px) rotate(180deg);
+  opacity: 0;
+}
+
+.switch-3 .checkbox:checked ~ .sun {
+  transform: translateX(24px) rotate(180deg);
+  opacity: 1;
+}
+
+.switch-3 .moon {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  height: 24px;
+  fill: var(--moon);
+  transition: 0.5s;
+}
+
+.switch-3 .sun {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  height: 24px;
+  fill: var(--sun);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* To hide the checkbox */
+#checkboxInput {
+  display: none;
+}
+
+.toggleSwitch {
+  scale: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  height: 17px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.toggleSwitch::after {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 0px;
+  background-color: #141315;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+  border: 2px solid #4d4b4e;
+}
+
+#checkboxInput:checked + .toggleSwitch::after {
+  transform: translateX(100%);
+  transition-duration: 0.3s;
+  border: 2px solid #8f44fd;
+}
+/* Switch background change */
+#checkboxInput:checked + .toggleSwitch {
+  background-color: #8f44fd;
+  transition-duration: 0.3s;
+}
+
+/* light and dark mode toggle switch END */
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/cssImages/vbi_skyline.jpg");
+  background-repeat: no-repeat;
+  object-fit: fill;
+  background-size: cover;
+  min-height: 350px;
 }
 
 h1 {
-    font-size: 50px;
-    color: var(--sunset);
-    text-shadow:
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    -2px -2px 0 #000,
+  font-size: 50px;
+  color: var(--sunset);
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000,
     2px -2px 0 #000;
-    padding: 15px;
-
+  padding: 15px;
 }
 
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .about {
-    background-color: var(--rocks);
-    color: var(--sandy);
-    font-size: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    flex-wrap: wrap;
-    align-items: center;
+  background-color: var(--rocks);
+  color: var(--sandy);
+  font-size: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .cliff {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    border-left: solid 5px var(--sandy);
-    height: 150px;
-    width: 125px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: solid 5px var(--sandy);
+  height: 150px;
+  width: 125px;
 }
 
 #about {
-    border-top: double 5px var(--sandy);
-    padding-top: 10px;
-    padding-bottom: 10px;
+  border-top: double 5px var(--sandy);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-p {
-    text-indent: 4ch;
-    margin-bottom: 10px;
+#about p {
+  font-size: 20px;
+  color: var(--sandy);
+  text-indent: 4ch;
+  margin-bottom: 10px;
 }
 
 .projects {
-    background-color: var(--ocean);
-    color: var(--sky);
-    font-size: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    flex-wrap: wrap;
-    align-items: center;
-
+  background-color: var(--ocean);
+  color: var(--sky);
+  font-size: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.contact {
-    background-color: var(--rocks);
-    color: var(--sandy);
+#projects {
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  column-count: 3;
+  border-top: double 5px var(--sky);
+}
+
+/* project cards */
+.card {
+  width: 350px;
+  height: 400px;
+  background: rgb(29, 28, 28);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  page-break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card img {
+  object-fit: cover;
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+  transform: translate(0, -40%);
+}
+
+.title {
+  color: var(--sandy);
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: rgb(202, 202, 202);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--sandy);
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.info {
+  transform: translate(0, -20%);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gifsLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.groovLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.couesLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.stratusLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.minionLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.snapiLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+
+/* .gifsNgiggles {
+    margin: 10px;
+    margin-top: 0px;
+    padding: 10px;
+    border: solid 3px var(--sky);
+    page-break-inside: avoid;
     display: flex;
-    flex-direction: row;
-    justify-content:center;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
+}
 
+.gifsLinks {
+    display: flexbox;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
 
+.groov {
+    margin: 10px;
+    padding: 10px;
+    border: solid 3px var(--sky);
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coues {
+    margin: 10px;
+    padding: 10px;
+    border: solid 3px var(--sky);
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stratus {
+    margin: 10px;
+    padding: 10px;
+    border: solid 3px var(--sky);
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minionManager {
+    margin: 10px;
+    padding: 10px;
+    border: solid 3px var(--sky);
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.snapiNosql {
+    margin: 10px;
+    padding: 10px;
+    border: solid 3px var(--sky);
+    page-break-inside: avoid;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+} */
+
+.contact {
+  background-color: var(--rocks);
+  color: var(--sandy);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 #contact {
-    background-color: var(--rocks);
-    color: var(--sandy);
-    font-size: 25px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+  background-color: var(--rocks);
+  color: var(--sandy);
+  font-size: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none;
 }
+
